@@ -109,6 +109,8 @@ function(x, y, weights, size, Wts, mask=rep(TRUE, length(wts)),
     net$nsunits <- nsunits
     net$decay <- decay
     net$entropy <- entropy
+    if(softmax && NCOL(y) < 2L)
+        stop("'softmax = TRUE' requires at least two response categories")
     net$softmax <- softmax
     net$censored <- censored
     if(missing(Wts))

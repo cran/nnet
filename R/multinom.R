@@ -70,10 +70,12 @@ multinom <-
             warning(sprintf(ngettext(length(empty),
                                      "group %s is empty",
                                      "groups %s are empty"),
-                            paste(empty, collapse=" ")), domain = NA)
+                            paste(sQuote(empty), collapse=" ")), domain = NA)
             Y <- factor(Y, levels=lev[counts > 0L])
             lev <- lev[counts > 0L]
         }
+        if(length(lev) < 2L)
+            stop("need two or more classes to fit a multinom model")
         if(length(lev) == 2L) Y <- as.vector(unclass(Y)) - 1
         else Y <- class.ind(Y)
     }
