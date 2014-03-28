@@ -1,5 +1,5 @@
 # file nnet/nnet.R
-# copyright (C) 1994-2003 W. N. Venables and B. D. Ripley
+# copyright (C) 1994-2013 W. N. Venables and B. D. Ripley
 #
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -31,7 +31,7 @@ nnet.formula <- function(formula, data, weights, ...,
     if(is.matrix(eval.parent(m$data)))
         m$data <- as.data.frame(data)
     m$... <- m$contrasts <- NULL
-    m[[1L]] <- as.name("model.frame")
+    m[[1L]] <- quote(stats::model.frame)
     m <- eval.parent(m)
     Terms <- attr(m, "terms")
     x <- model.matrix(Terms, m, contrasts)

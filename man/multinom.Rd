@@ -35,7 +35,7 @@ matrix with K columns, which will be interpreted as counts for each of
 K classes.
 A log-linear model is fitted, with coefficients zero for the first
 class. An offset can be included: it should be a numeric matrix with K columns
-if the response is either a matrix with K columns or a factor with K > 2
+if the response is either a matrix with K columns or a factor with K >= 2
 classes, or a numeric vector for a response factor with 2 levels.
 See the documentation of \code{\link{formula}()} for other details.
 }
@@ -68,7 +68,7 @@ with the same X and different Y, which changes the baseline for the
 deviance.
 }
 \item{censored}{
-If Y is a matrix with \code{K > 2} columns, interpret the entries as one
+If Y is a matrix with \code{K} columns, interpret the entries as one
 for possible classes, zero for impossible classes, rather than as
 counts.
 }

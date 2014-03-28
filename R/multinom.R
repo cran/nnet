@@ -1,5 +1,5 @@
 # file nnet/multinom.R
-# copyright (C) 1994-2006 W. N. Venables and B. D. Ripley
+# copyright (C) 1994-2013 W. N. Venables and B. D. Ripley
 #
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -51,7 +51,7 @@ multinom <-
     call <- match.call()
     m <- match.call(expand.dots = FALSE)
     m$summ <- m$Hess <- m$contrasts <- m$censored <- m$model <- m$... <- NULL
-    m[[1L]] <- as.name("model.frame")
+    m[[1L]] <- quote(stats::model.frame)
     m <- eval.parent(m)
     Terms <- attr(m, "terms")
     X <- model.matrix(Terms, m, contrasts)
@@ -424,7 +424,7 @@ model.frame.multinom <- function(formula, ...)
     nargs <- dots[match(c("data", "na.action", "subset"), names(dots), 0)]
     if(length(nargs) || is.null(formula$model)) {
         oc <- formula$call
-        oc[[1L]] <- as.name("model.frame")
+        oc[[1L]] <- quote(stats::model.frame)
         m <- match(names(oc)[-1L], c("formula", "data", "na.action", "subset"))
         oc <- oc[c(TRUE, !is.na(m))]
         oc[names(nargs)] <- nargs

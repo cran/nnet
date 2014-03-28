@@ -1,19 +1,19 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: nnet 7.3-1\n"
+"Project-Id-Version: nnet 7.3-7\n"
 "Report-Msgid-Bugs-To: bugs@r-project.org\n"
-"POT-Creation-Date: 2012-07-14 16:37\n"
-"PO-Revision-Date: 2012-09-24 21:21+0100\n"
+"POT-Creation-Date: 2012-10-08 10:54\n"
+"PO-Revision-Date: 2014-03-25 16:05+0100\n"
 "Last-Translator: Łukasz Daniel <lukasz.daniel@gmail.com>\n"
 "Language-Team: Łukasz Daniel <lukasz.daniel@gmail.com>\n"
 "Language: pl_PL\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 "X-Poedit-SourceCharset: iso-8859-1\n"
-"X-Generator: Poedit 1.5.3\n"
+"X-Generator: Poedit 1.5.4\n"
 
 # nnet/R/multinom.R: 79
 # stop("need two or more classes to fit a multinom model")
@@ -30,43 +30,38 @@ msgstr "niektóre przypadki nie mają obserwacji"
 msgid "ncol(offset) is wrong"
 msgstr "'ncol(offset)' jest błędny"
 
-# nnet/R/multinom.R: 175
-# stop("not a \"multinom\" fit")
-# nnet/R/multinom.R: 236
-# stop("not a \"multinom\" fit")
-# nnet/R/multinom.R: 268
-# stop("not a \"multinom\" fit")
 msgid "not a \"multinom\" fit"
-msgstr "to nie jest dopasowanie \"multinom\""
+msgstr "argument nie jest obiektem klasy \"multinom\""
 
 # nnet/R/multinom.R: 243
 # stop("'scope' is not a subset of term labels")
 msgid "'scope' is not a subset of term labels"
 msgstr "'scope' nie jest podzbiorem etykiet członów"
 
-# nnet/R/multinom.R: 259
+# nnet/R/multinom.R: 258
 # stop("number of rows in use has changed: remove missing values?")
-# nnet/R/multinom.R: 289
+# nnet/R/multinom.R: 287
 # stop("number of rows in use has changed: remove missing values?")
 msgid "number of rows in use has changed: remove missing values?"
 msgstr "liczba wierszy w użyciu zmieniła się: usunąć brakujące wartości?"
 
-# nnet/R/multinom.R: 273
+# nnet/R/multinom.R: 272
 # stop("no terms in 'scope' for adding to object")
 msgid "no terms in 'scope' for adding to object"
 msgstr "brak członów w 'scope' do dodania do obiektu"
 
-# nnet/R/multinom.R: 386
-# stop('anova is not implemented for a single "multinom" object')
+# nnet/R/multinom.R: 384
+# stop("anova is not implemented for a single \"multinom\" object")
 msgid "anova is not implemented for a single \"multinom\" object"
-msgstr "anova nie jest zaimplementowana dla pojedynczego obiektu \"multinom\""
+msgstr ""
+"'anova()' nie jest zaimplementowana dla pojedynczego obiektu \"multinom\""
 
-# nnet/R/multinom.R: 395
+# nnet/R/multinom.R: 393
 # stop('not all objects are of class "multinom"')
 msgid "not all objects are of class \"multinom\""
-msgstr "nie wszystkie obiekt są klasy \"multinom\""
+msgstr "nie wszystkie obiekty są klasy \"multinom\""
 
-# nnet/R/multinom.R: 398
+# nnet/R/multinom.R: 396
 # stop("models were not all fitted to the same size of dataset")
 msgid "models were not all fitted to the same size of dataset"
 msgstr ""
@@ -100,7 +95,7 @@ msgid "no weights to fit"
 msgstr "brak wag do dopasowania"
 
 # nnet/R/nnet.R: 106
-# stop(gettextf("too many (%d) weights", nwts), domain=NA)
+# stop(gettextf("too many (%d) weights", nwts), domain = "R-nnet")
 msgid "too many (%d) weights"
 msgstr "zbyt dużo (%d) wag"
 
@@ -121,40 +116,38 @@ msgstr "niepoprawna długość 'mask'"
 
 # nnet/R/nnet.R: 144
 # stop("invalid weights vector")
-# nnet/R/nnet.R: 297
+# nnet/R/nnet.R: 296
 # stop("invalid weights vector")
 msgid "invalid weights vector"
 msgstr "niepoprawny wektor wag"
 
-# nnet/R/nnet.R: 181
-# stop("object not of class \"nnet\"")
+# nnet/R/multinom.R: 393
+# stop('not all objects are of class "multinom"')
 msgid "object not of class \"nnet\""
-msgstr "obiekt nie jest klasy \"nnet\""
+msgstr "argument nie jest obiektem klasy \"nnet\""
 
-# nnet/R/nnet.R: 227
+# nnet/R/nnet.R: 226
 # stop("inappropriate fit for class")
 msgid "inappropriate fit for class"
 msgstr "niepoprawne dopasowanie dla klasy"
 
-# nnet/R/nnet.R: 280
+# nnet/R/nnet.R: 279
 # stop("dims of 'x' and 'y' must match")
 msgid "dims of 'x' and 'y' must match"
 msgstr "wymiary dla 'x' oraz 'y' muszą się zgadzać"
 
-# nnet/R/nnet.R: 319
-# stop("not a legitimate neural net fit")
 msgid "not a legitimate neural net fit"
-msgstr "to nie jest poprawne dopasowanie sieci neuronowych"
+msgstr "niepoprawne dopasowanie sieci neuronowej"
 
 # nnet/R/multinom.R: 71
 # warning(sprintf(ngettext(length(empty),
 #                                      "group %s is empty",
-#                                      "groups %s are empty"),
-#                             paste(sQuote(empty), collapse=" ")), domain = NA)
+#                                      "groups %s are empty", domain = "R-nnet"),
+#                             paste(sQuote(empty), collapse = " ")), domain = NA)
 # nnet/R/nnet.R: 49
 # warning(sprintf(ngettext(length(empty),
 #                                      "group %s is empty",
-#                                      "groups %s are empty"),
+#                                      "groups %s are empty", domain = "R-nnet"),
 #                             paste(sQuote(empty), collapse=" ")), domain = NA)
 msgid "group %s is empty"
 msgid_plural "groups %s are empty"
