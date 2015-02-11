@@ -1,5 +1,5 @@
 % file nnet/man/multinom.Rd
-% copyright (C) 1994-2006 W. N. Venables and B. D. Ripley
+% copyright (C) 1994-2015 W. N. Venables and B. D. Ripley
 %
 \name{multinom}
 \alias{multinom}
@@ -115,19 +115,6 @@ options(contrasts = c("contr.treatment", "contr.poly"))
 library(MASS)
 example(birthwt)
 (bwt.mu <- multinom(low ~ ., bwt))
-\dontrun{Call:
-multinom(formula = low ~ ., data = bwt)
-
-Coefficients:
- (Intercept)         age         lwt raceblack raceother
-    0.823477 -0.03724311 -0.01565475  1.192371 0.7406606
-     smoke      ptd        ht        ui       ftv1     ftv2+
-  0.7555234 1.343648 1.913213 0.6802007 -0.4363238 0.1789888
-
-
-Residual Deviance: 195.4755
-AIC: 217.4755
-}
 }
 \keyword{neural}
 \keyword{models}

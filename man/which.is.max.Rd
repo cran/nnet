@@ -1,5 +1,5 @@
 % file nnet/R/which.is.max.Rd
-% copyright (C) 1994-9 W. N. Venables and B. D. Ripley
+% copyright (C) 1994-2015 W. N. Venables and B. D. Ripley
 %
 \name{which.is.max}
 \alias{which.is.max}
@@ -30,8 +30,8 @@ Ties are broken at random.
   \emph{Modern Applied Statistics with S.} Fourth edition.  Springer.
 }
 \examples{
-\dontrun{
+\dontrun{## this is incomplete
 pred <- predict(nnet, test)
-table(true, apply(pred,1,which.is.max))
+table(true, apply(pred, 1, which.is.max))
 }}
 \keyword{utilities}
