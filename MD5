@@ -1,12 +1,12 @@
-e1afd24dc907b4abb503e2cd2b2e7d3e *DESCRIPTION
+3eb539de6d41259f2d6ccc4423cc89af *DESCRIPTION
 5eebfdd24e8b4bbc1a0e6fbda79d194d *LICENCE.note
 3108fb45014de53cb6a33bdac2bc71b3 *NAMESPACE
 bddd60ee2fc196f68a625aae7a08aa56 *R/multinom.R
 b9c1e2c28b9a500b31aedb5150445b0a *R/nnet.R
-ffabc72d117270490cfe8495be8e7b9e *R/vcovmultinom.R
+0611f18002ef19f31e57919fd7a80b35 *R/vcovmultinom.R
 91cbc73bd6fed6d715f20cd97e7a47ac *R/zzz.R
 aea650cb108dfd007ba5b35ad6ff7226 *inst/CITATION
-4729791c0e3f51b8bfe12b92b1ecfaf2 *inst/NEWS
+b5835a1a06dc5a83b0465dbd6c3f39e4 *inst/NEWS
 4682a1b1ed1e5484274b4ff1337e4afd *inst/po/de/LC_MESSAGES/R-nnet.mo
 b876852361c19c4289c6461780e7084f *inst/po/en@quot/LC_MESSAGES/R-nnet.mo
 d98b4282978de19abb84d70b0c3d096d *inst/po/fr/LC_MESSAGES/R-nnet.mo
@@ -23,4 +23,4 @@ f846b6a5f4a8466aad32c811b3189bd0 *man/which.is.max.Rd
 014a91a7615597b53e2019156a051c57 *po/R-ko.po
 63da0f926babcfc000f19c8ef8af3a1f *po/R-nnet.pot
 43625e745274aa2ccf25b7d142d91dda *po/R-pl.po
-7df5fbf009180cb7a0865dce4d0b7447 *src/nnet.c
+c9015475b5d0ed033b16b4bbc99e4008 *src/nnet.c

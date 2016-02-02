@@ -1,5 +1,5 @@
 # file nnet/vcovmultinom.R
-# copyright (c) 2003 B. D. Ripley
+# copyright (c) 2003-2016 B. D. Ripley
 # Use of analytic Fisher information contributed by David Firth
 #
 #  This program is free software; you can redistribute it and/or modify
@@ -17,7 +17,7 @@
 #
 multinomHess <- function(object, Z = model.matrix(object))
 {
-    probs <- fitted(object)
+    probs <- object$fitted # avoid napredict from fitted.default
     coefs <- coef(object)
     if (is.vector(coefs)){ # ie there are only 2 response categories
         coefs <- t(as.matrix(coefs))
@@ -40,12 +40,12 @@ multinomHess <- function(object, Z = model.matrix(object))
                              function(name2, name1)
                                  paste(name1, name2, sep = ":")))
     dimnames(info) <- list(Names, Names)
-    x0 <- matrix(0, p, k+1)
+    x0 <- matrix(0, p, k+1L)
     row.totals <- object$weights
-    for (i in 1L:n){
+    for (i in seq_len(n)) {
         Zi <- Z[i, ]
-        xbar <- Zi * rep(probs[i, -1, drop=FALSE], kpees)
-        for (j in 1L:(k+1)){
+        xbar <- Zi * rep(probs[i, -1, drop = FALSE], kpees)
+        for (j in seq_len(k+1)){
             x <- x0
             x[, j] <- Zi
             x <- x[, -1, drop = FALSE]

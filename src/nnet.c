@@ -1,4 +1,4 @@
-/*  nnet/src/nnet.c by W. N. Venables and B. D. Ripley  Copyright (C) 1992-2002
+/*  nnet/src/nnet.c by W. N. Venables and B. D. Ripley  Copyright (C) 1992-2016
  *
  *
  *  This program is free software; you can redistribute it and/or modify
@@ -22,6 +22,7 @@
  *
  */
 
+#include <stdlib.h> // currently in R.h
 #include <R.h>
 #include <R_ext/Applic.h>
 #include <math.h>
