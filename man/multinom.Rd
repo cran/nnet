@@ -1,5 +1,5 @@
 % file nnet/man/multinom.Rd
-% copyright (C) 1994-2015 W. N. Venables and B. D. Ripley
+% copyright (C) 1994-2020 W. N. Venables and B. D. Ripley
 %
 \name{multinom}
 \alias{multinom}
@@ -111,10 +111,11 @@ the AIC for this fit.
 \code{\link{nnet}}
 }
 \examples{
-options(contrasts = c("contr.treatment", "contr.poly"))
+oc <- options(contrasts = c("contr.treatment", "contr.poly"))
 library(MASS)
 example(birthwt)
 (bwt.mu <- multinom(low ~ ., bwt))
+options(oc)
 }
 \keyword{neural}
 \keyword{models}

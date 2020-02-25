@@ -1,4 +1,4 @@
-3eb539de6d41259f2d6ccc4423cc89af *DESCRIPTION
+8f3015244746ec79b9c43216a1989cb9 *DESCRIPTION
 5eebfdd24e8b4bbc1a0e6fbda79d194d *LICENCE.note
 3108fb45014de53cb6a33bdac2bc71b3 *NAMESPACE
 bddd60ee2fc196f68a625aae7a08aa56 *R/multinom.R
@@ -8,12 +8,12 @@ b9c1e2c28b9a500b31aedb5150445b0a *R/nnet.R
 aea650cb108dfd007ba5b35ad6ff7226 *inst/CITATION
 b5835a1a06dc5a83b0465dbd6c3f39e4 *inst/NEWS
 4682a1b1ed1e5484274b4ff1337e4afd *inst/po/de/LC_MESSAGES/R-nnet.mo
-b876852361c19c4289c6461780e7084f *inst/po/en@quot/LC_MESSAGES/R-nnet.mo
+44b2555e4086b100f3ecc72184ed24fb *inst/po/en@quot/LC_MESSAGES/R-nnet.mo
 d98b4282978de19abb84d70b0c3d096d *inst/po/fr/LC_MESSAGES/R-nnet.mo
 c74cb2fe77bded6c2bcac88036435df9 *inst/po/ko/LC_MESSAGES/R-nnet.mo
 608cb1952173ffd8515b8ff87296cb1e *inst/po/pl/LC_MESSAGES/R-nnet.mo
 658e8411d785b785db614690f26710b0 *man/class.ind.Rd
-b08544c76966d44fdeeced7e4c708d74 *man/multinom.Rd
+fe472544c04056e1f11ffa6775d7790e *man/multinom.Rd
 cd6a3761edca3e8aa4c84b873f48f9ff *man/nnet.Hess.Rd
 5549369cf450981481c450ff31720fe7 *man/nnet.Rd
 a3b762d16d720130f354292ec6e5d3ad *man/predict.nnet.Rd
@@ -21,6 +21,6 @@ f846b6a5f4a8466aad32c811b3189bd0 *man/which.is.max.Rd
 4cc26e5da1e3bac49338eeef537a782e *po/R-de.po
 2f4ec60d8d5171edfa72b0ef67eebaba *po/R-fr.po
 014a91a7615597b53e2019156a051c57 *po/R-ko.po
-63da0f926babcfc000f19c8ef8af3a1f *po/R-nnet.pot
+9b505af49e23aeb234e6fd2a613cbc60 *po/R-nnet.pot
 43625e745274aa2ccf25b7d142d91dda *po/R-pl.po
-c9015475b5d0ed033b16b4bbc99e4008 *src/nnet.c
+5a10838e355368403aab2b71abc56e6e *src/nnet.c
