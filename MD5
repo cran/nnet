@@ -1,11 +1,11 @@
-0e3248ce6e1d93c3ca0e9b90e94b6e64 *DESCRIPTION
+6465e87b8cafaa1c6671725ad3285471 *DESCRIPTION
 5eebfdd24e8b4bbc1a0e6fbda79d194d *LICENCE.note
 3108fb45014de53cb6a33bdac2bc71b3 *NAMESPACE
 bddd60ee2fc196f68a625aae7a08aa56 *R/multinom.R
 b9c1e2c28b9a500b31aedb5150445b0a *R/nnet.R
 0611f18002ef19f31e57919fd7a80b35 *R/vcovmultinom.R
 91cbc73bd6fed6d715f20cd97e7a47ac *R/zzz.R
-aea650cb108dfd007ba5b35ad6ff7226 *inst/CITATION
+c8d531be56f6ea62e73d9787e17f3e30 *inst/CITATION
 b5835a1a06dc5a83b0465dbd6c3f39e4 *inst/NEWS
 4682a1b1ed1e5484274b4ff1337e4afd *inst/po/de/LC_MESSAGES/R-nnet.mo
 624eb1c4954ccd23f37e9fd3c1abd3c7 *inst/po/en@quot/LC_MESSAGES/R-nnet.mo
