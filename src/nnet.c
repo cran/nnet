@@ -1,4 +1,4 @@
-/*  nnet/src/nnet.c by W. N. Venables and B. D. Ripley  Copyright (C) 1992-2016
+/*  nnet/src/nnet.c by W. N. Venables and B. D. Ripley  Copyright (C) 1992-2022
  *
  *
  *  This program is free software; you can redistribute it and/or modify
@@ -80,11 +80,11 @@ VR_set_net(Sint *n, Sint *nconn, Sint *conn,
     for (i = 0; i <= Nunits; i++)
 	Nconn[i] = nconn[i];
     Nweights = Nconn[Nunits];
-    Conn = Calloc(Nweights, int);
-    wts = Calloc(Nweights, double);
-    Slopes = Calloc(Nweights, double);
-    Probs = Calloc(Nweights, double);
-    Decay = Calloc(Nweights, double);
+    Conn = R_Calloc(Nweights, int);
+    wts = R_Calloc(Nweights, double);
+    Slopes = R_Calloc(Nweights, double);
+    Probs = R_Calloc(Nweights, double);
+    Decay = R_Calloc(Nweights, double);
     for (i = 0; i < Nweights; i++)
 	Conn[i] = conn[i];
     Epoch = 0;
@@ -101,16 +101,16 @@ VR_set_net(Sint *n, Sint *nconn, Sint *conn,
 void 
 VR_unset_net()
 {
-    Free(Conn);
-    Free(wts);
-    Free(Slopes);
-    Free(Probs);
-    Free(Decay);
-    Free(Nconn);
-    Free(Outputs);
-    Free(ErrorSums);
-    Free(Errors);
-    Free(toutputs);
+    R_Free(Conn);
+    R_Free(wts);
+    R_Free(Slopes);
+    R_Free(Probs);
+    R_Free(Decay);
+    R_Free(Nconn);
+    R_Free(Outputs);
+    R_Free(ErrorSums);
+    R_Free(Errors);
+    R_Free(toutputs);
 }
 
 void
@@ -142,11 +142,11 @@ static void
 Build_Net(int ninputs, int nhidden, int noutputs)
 {
     Nunits = 1 + ninputs + nhidden + noutputs;
-    Nconn = Calloc(Nunits + 1, int);
-    Outputs = Calloc(Nunits, double);
-    ErrorSums = Calloc(Nunits, double);
-    Errors = Calloc(Nunits, double);
-    toutputs = Calloc(Nunits, Sdata);
+    Nconn = R_Calloc(Nunits + 1, int);
+    Outputs = R_Calloc(Nunits, double);
+    ErrorSums = R_Calloc(Nunits, double);
+    Errors = R_Calloc(Nunits, double);
+    toutputs = R_Calloc(Nunits, Sdata);
     Ninputs = ninputs;
     FirstHidden = 1 + ninputs;
     FirstOutput = 1 + ninputs + nhidden;
@@ -371,14 +371,14 @@ vect(int n)
 {
     double *v;
 
-    v = Calloc(n, double);
+    v = R_Calloc(n, double);
     return v;
 }
 
 static void 
 free_vect(double *v)
 {
-    Free(v);
+    R_Free(v);
 }
 
 static double **
@@ -387,10 +387,10 @@ matrix(int nrh, int nch)
     int   i;
     double **m;
 
-    m = Calloc((nrh + 1), double *);
+    m = R_Calloc((nrh + 1), double *);
 
     for (i = 0; i <= nrh; i++) {
-	m[i] = Calloc((nch + 1), double);
+	m[i] = R_Calloc((nch + 1), double);
     }
     return m;
 }
@@ -401,8 +401,8 @@ free_matrix(double **m, int nrh, int nch)
     int   i;
 
     for (i = nrh; i >= 0; i--)
-	Free(m[i]);
-    Free(m);
+	R_Free(m[i]);
+    R_Free(m);
 }
 
 static double **
@@ -411,10 +411,10 @@ Lmatrix(int n)
     int   i;
     double **m;
 
-    m = Calloc(n, double *);
+    m = R_Calloc(n, double *);
 
     for (i = 0; i < n; i++) {
-	m[i] = Calloc((i + 1), double);
+	m[i] = R_Calloc((i + 1), double);
     }
     return m;
 }
@@ -425,8 +425,8 @@ free_Lmatrix(double **m, int n)
     int   i;
 
     for (i = n - 1; i >= 0; i--)
-	Free(m[i]);
-    Free(m);
+	R_Free(m[i]);
+    R_Free(m);
 }
 
 
