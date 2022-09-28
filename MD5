@@ -1,4 +1,4 @@
-b3526e04aaa301b81f8effe5d622818b *DESCRIPTION
+cd15dae24b015dadbb104ac7e5753295 *DESCRIPTION
 96ca8858604cc2dad175578a3481a5de *LICENCE.note
 3108fb45014de53cb6a33bdac2bc71b3 *NAMESPACE
 bddd60ee2fc196f68a625aae7a08aa56 *R/multinom.R
@@ -25,4 +25,4 @@ edebef236b0bceb62d08f8991f17d4b0 *po/R-fr.po
 014a91a7615597b53e2019156a051c57 *po/R-ko.po
 4a5ef8264cc0cd5d16a09cd25f5db420 *po/R-nnet.pot
 43625e745274aa2ccf25b7d142d91dda *po/R-pl.po
-cc557285fd97e1b3b5f35cfd7688845a *src/nnet.c
+ebb0b4a6c2cec84d7347dcb47beba3aa *src/nnet.c

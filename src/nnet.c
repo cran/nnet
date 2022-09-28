@@ -70,9 +70,9 @@ static Sdata *Weights;
 static Sdata *toutputs;
 
 void
-VR_set_net(Sint *n, Sint *nconn, Sint *conn,
-	   double *decay, Sint *nsunits, Sint *entropy,
-	   Sint *softmax, Sint *censored)
+VR_set_net(int *n, int *nconn, int *conn,
+	   double *decay, int *nsunits, int *entropy,
+	   int *softmax, int *censored)
 {
     int   i;
 
@@ -99,7 +99,7 @@ VR_set_net(Sint *n, Sint *nconn, Sint *conn,
 }
 
 void 
-VR_unset_net()
+VR_unset_net(void)
 {
     R_Free(Conn);
     R_Free(wts);
@@ -114,7 +114,7 @@ VR_unset_net()
 }
 
 void
-VR_nntest(Sint *ntest, Sdata *test, Sdata *result, double *inwts)
+VR_nntest(int *ntest, Sdata *test, Sdata *result, double *inwts)
 {
     int   i, j;
 
@@ -433,9 +433,9 @@ free_Lmatrix(double **m, int n)
 #define REPORT		10
 
 void
-VR_dovm(Sint *ntr, Sdata *train, Sdata *weights,
-	Sint *Nw, double *wts, double *Fmin,
-	Sint *maxit, Sint *trace, Sint *mask,
+VR_dovm(int *ntr, Sdata *train, Sdata *weights,
+	int *Nw, double *wts, double *Fmin,
+	int *maxit, int *trace, int *mask,
 	double *abstol, double *reltol, int *ifail)
 {
     int fncount, grcount;
@@ -595,7 +595,7 @@ pHessian(Sdata *input, Sdata *goal, Sdata wx, int nr)
 #define min9(a,b) a<b?a:b
 
 void
-VR_nnHessian(Sint *ntr, Sdata *train, Sdata *weights,
+VR_nnHessian(int *ntr, Sdata *train, Sdata *weights,
 	     double *inwts, Sdata *Hess)
 {
     int   i, j;
@@ -652,7 +652,7 @@ Zcompar(const Sdata *a, const Sdata *b)
 /* Z is transposed, so (p+q) x n */
 
 void
-VR_summ2(Sint *n0, Sint *p0, Sint *q0, Sdata *Z, Sint *na)
+VR_summ2(int *n0, int *p0, int *q0, Sdata *Z, int *na)
 {
     int   n = *n0, m;
     int   i, j, k, l;
