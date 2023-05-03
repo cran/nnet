@@ -193,7 +193,7 @@ predict.nnet <- function(object, newdata, type=c("raw","class"), ...)
             if (!is.null(cl <- attr(Terms, "dataClasses")))
                 .checkMFClasses(cl, m)
             keep <- match(row.names(m), rn)
-            x <- model.matrix(Terms, m, contrasts = object$contrasts)
+            x <- model.matrix(Terms, m, contrasts.arg = object$contrasts)
             xint <- match("(Intercept)", colnames(x), nomatch=0L)
             if(xint > 0L) x <- x[, -xint, drop=FALSE] # Bias term is used for intercepts
         } else {

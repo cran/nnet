@@ -1,5 +1,5 @@
 # file nnet/multinom.R
-# copyright (C) 1994-2013 W. N. Venables and B. D. Ripley
+# copyright (C) 1994-2023 W. N. Venables and B. D. Ripley
 #
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -184,7 +184,7 @@ predict.multinom <- function(object, newdata, type=c("class","probs"), ...)
         if (!is.null(cl <- attr(Terms, "dataClasses")))
             .checkMFClasses(cl, m)
         keep <- match(row.names(m), rn)
-        X <- model.matrix(Terms, m, contrasts = object$contrasts)
+        X <- model.matrix(Terms, m, contrasts.arg = object$contrasts)
         Y1 <- predict.nnet(object, X)
         Y <- matrix(NA, nrow(newdata), ncol(Y1),
                     dimnames = list(rn, colnames(Y1)))
