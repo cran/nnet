@@ -122,7 +122,7 @@ VR_nntest(int *ntest, Sdata *test, Sdata *result, double *inwts)
 	wts[i] = inwts[i];
     NTest = *ntest;
     if (Nweights == 0)
-	error("No model set");
+	Rf_error("No model set");
 
     for (i = 0; i < Noutputs; i++)
 	toutputs[i] = 0.5;
